@@ -8,9 +8,11 @@ public class ReserveNumbers {
     }
     private static int getReserveNumber(int n){
         int reverse=0;
+        int digit=0;
         while (n>0){
-            n=n%10;
-            reverse+=n;
+            digit=n%10;
+            reverse=(reverse*10)+digit;
+            n=n/10;
         }
         return reverse;
     }
