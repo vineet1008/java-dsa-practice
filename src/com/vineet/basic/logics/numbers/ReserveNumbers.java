@@ -6,7 +6,7 @@ public class ReserveNumbers {
         System.out.println("The Reserve of Number :: "+getReserveNumber(12345));
 
     }
-    private static int getReserveNumber(int n){
+    protected static int getReserveNumber(int n){
         int reverse=0;
         int digit=0;
         while (n>0){
