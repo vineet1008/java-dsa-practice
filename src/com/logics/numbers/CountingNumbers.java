@@ -1,4 +1,4 @@
-package com.vineet.basic.logics.numbers;
+package com.logics.numbers;
 
 public class CountingNumbers {
 
