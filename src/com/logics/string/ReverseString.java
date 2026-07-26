@@ -16,8 +16,9 @@ public class ReverseString {
     private static void getReverseString() {
         String name="Vineet";
         String reverse="";
+        System.out.println(name.length());
         for (int i=name.length()-1;i>=0;i--){
-            reverse+=name.charAt(i)+"";
+            reverse+=name.charAt(i);
         }
         System.out.println("The Reverse of String is "+reverse);
 
