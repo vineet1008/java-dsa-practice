@@ -4,16 +4,15 @@ public class FirstUniqueCharacterString {
 
     public static void main(String[] args) {
         String s="leetcode";
-        int index=firstUniqChar(s);
+        System.out.println(firstUniqChar(s));
     }
 
     private static int firstUniqChar(String s) {
-        int left=0;
-        int right=s.length()-1;
-        char[] c=s.toCharArray();
-        while (left<right){
-
-            left++;
+        for (int i=0;i<s.length()-1;i++){
+            if(s.indexOf(s.charAt(i))==s.lastIndexOf(s.charAt(i))){
+                return i;
+            }
         }
+        return -1;
     }
 }
