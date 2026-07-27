@@ -1,19 +1,36 @@
 package com.logics.numbers;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class MajorityElement {
 
     public static void main(String[] args) {
         int[] nums = {3,2,3};
-        System.out.println(nums.length);
         System.out.println(majorityElement(nums));
     }
 
     private static int majorityElement(int[] nums) {
-        int majorityElement=nums.length/2;
-        System.out.println(majorityElement);
-        if(majorityElement>nums[0]){
-            return nums[0];
+        int n=nums.length/2;
+        Map<Integer,Integer> map=new HashMap<>();
+        int count=1;
+        for (int i:nums){
+            if(map.containsKey(i)){
+                map.put(i,count+1);
+                count++;
+            }else {
+                map.put(i,count);
+            }
+
         }
+        System.out.println(map);
+        for(Map.Entry<Integer,Integer> m:map.entrySet()){
+            if(m.getValue()>n){
+                return m.getKey();
+            }
+        }
+
+
         return 0;
     }
 
