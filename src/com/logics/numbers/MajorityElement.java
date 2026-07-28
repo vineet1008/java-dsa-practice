@@ -28,8 +28,6 @@ public class MajorityElement {
                 return m.getKey();
             }
         }
-
-
         return 0;
     }
 
