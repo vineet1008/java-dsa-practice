@@ -1,4 +1,4 @@
-package com.logics.numbers;
+package com.logics.arrays;
 
 import java.util.HashMap;
 import java.util.Map;
